@@ -13,15 +13,13 @@ const App = () => {
   const data = contactsJSON.map((resource) => {
     return resource
   })
- 
-  const [kontak, setKontak] = useState(data)
 
+  const [kontak, setKontak] = useState(data)
   function spreadData(newContact) {
     setKontak([...kontak, newContact])
+
   }
 
-
-  // spreadData();
   // Masukkan Header dan lakukan map untuk Contact ke dalam div App
   // untuk membuat daftar kontak bisa menggunakan MUI list
   // https://mui.com/material-ui/react-list/#folder-list
@@ -34,7 +32,7 @@ const App = () => {
     <div className="App">
       <Header />
       <ContactForm spreadData={spreadData} />
-      <Contact data={kontak} />
+      <Contact initialData={data} newData={kontak} />
     </div>
   );
 };
