@@ -68,4 +68,5 @@ const ContactForm = ({ spreadData }) => {
         </div>
     );
 }
+
 export default ContactForm;

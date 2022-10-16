@@ -10,11 +10,7 @@ import { useState } from 'react';
 
 const App = () => {
 
-  const data = contactsJSON.map((resource) => {
-    return resource
-  })
-
-  const [kontak, setKontak] = useState(data)
+  const [kontak, setKontak] = useState(contactsJSON)
   function spreadData(newContact) {
     setKontak([...kontak, newContact])
 
@@ -32,7 +28,11 @@ const App = () => {
     <div className="App">
       <Header />
       <ContactForm spreadData={spreadData} />
-      <Contact initialData={data} newData={kontak} />
+      {kontak.map((contacts, index)=>{
+        return (
+          <Contact key={index} data={contacts} />
+        )
+      })}   
     </div>
   );
 };

@@ -10,8 +10,8 @@ const Header = () => {
   return (
     <>
       <Card variant="outlined">
-        <h1>Call a Friend</h1>
-        <p>Your friendly contact app</p>
+        <h1> Call a Friend</h1>
+        <p>Your Friendly Contact App</p>
       </Card>
     </>
   );
